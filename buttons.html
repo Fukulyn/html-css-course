@@ -1,33 +1,51 @@
 <style>
   .sub-button {
-    background-color: rgb(200, 0, 0);
+    background-color: #cc0000;
     color: white;
     border: none;
-    height: 36px;
-    width: 105px;
     border-radius: 2px;
     cursor: pointer;
+    margin-left: 8px;
     margin-right: 8px ;
+    transition: opacity 0.15s;
+    vertical-align: top;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 16px;
+    padding-right: 16px;
   }
 
   .sub-button:hover {
-    background-color: green;
+    opacity: 0.7;
   }
 
   .sub-button:active{
-    background-color: blue;
+    opacity: 0.5;
   }
 
   .join-button{
     background-color: rgb(255, 255, 255);
-    color: rgb(39, 110, 157);
-    border-color: rgb(39, 110, 157);
+    color: #065fd4;
+    border-color: #065fd4;
     border-style: solid;
     border-width: 1px;
-    height: 36px;
-    width: 62px;
-    border-radius: 2px;
     cursor: pointer;
+    padding-top: 9px;
+    padding-bottom: 9px;
+    padding-left: 16px;
+    padding-right: 16px;
+    border-radius: 2px;
+    transition: background-color 0.15s,
+      color 0.15s;
+  }
+
+  .join-button:hover{
+    background-color: #065fd4;
+    color: white;
+  } 
+
+  .join-button:active{
+    opacity: 0.7;
   }
 
   .tweet-button{
@@ -37,20 +55,27 @@
     height: 36px;
     width: 74px;
     border-radius: 18px;
-    margin-left: 8px ;
     font-weight: bold;
     font-size: 15px;
     cursor: pointer;
+    margin-left: 8px ;
+    transition: box-shadow 0.15s;
+    vertical-align: top;
+  }
+
+  .tweet-button:hover{
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15);
   }
 </style>
+<!--rgba的第1-3欄為顏色 第4欄為透明度-->
+<!--JOIN的按鈕Padding少1px才能跟Sub按鈕一樣高 原因是border-width會佔 1 pixel-->
 
 <button class="sub-button">
-  SUBSCRIBE
+  SUBSCRIBE 
 </button>
 
 <button class="join-button">
-  JOIN
-</button>
+  JOIN 
 
 <button class="tweet-button">
   Tweet
